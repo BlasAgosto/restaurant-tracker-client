@@ -10,6 +10,11 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import CreateRestaurant from './components/create_restaurant'
+import IndexRestaurants from './components/IndexRestaurants'
+// import AllRestaurants from './components/AllRestaurants'
+// import Delete from './components/Delete'
+// import IndexRestaurant from '../REMOVED/Index_Restaurant'
 
 class App extends Component {
   constructor (props) {
@@ -44,8 +49,8 @@ class App extends Component {
 
     return (
       <Fragment>
-	      <Header user={user} />
-	      {msgAlerts.map((msgAlert) => (
+        <Header user={user} />
+        {msgAlerts.map((msgAlert) => (
           <AutoDismissAlert
             key={msgAlert.id}
             heading={msgAlert.heading}
@@ -55,8 +60,8 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-	      <main className='container'>
-	        <Route
+        <main className='container'>
+          <Route
             path='/sign-up'
             render={() => (
               <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
@@ -86,6 +91,28 @@ class App extends Component {
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
           />
+          <AuthenticatedRoute
+            user={user}
+            path='/add-rests'
+            render={() => (
+              <CreateRestaurant msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/your-rests'
+            render={() => (
+              <IndexRestaurants msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          {/* <AuthenticatedRoute
+            user={user}
+            exact
+            path='/'
+            render={() => (
+              <AllRestaurants msgAlert={this.msgAlert} user={user} />
+            )}
+          /> */}
         </main>
       </Fragment>
     )
