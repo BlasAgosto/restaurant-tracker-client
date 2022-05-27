@@ -53,7 +53,17 @@ export const deleteRestaurant = (user, id) => {
 export const filterRestaurant = (id, user) => {
   return axios({
     method: 'GET',
-    url: apiUrl + '/filter-rests/' + id,
+    url: apiUrl + '/add-rests/' + id,
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}
+export const allRestaurant = (user) => {
+  // console.log('HELLLLLLLPPPPPPPPPPP')
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/all-rests/',
     headers: {
       Authorization: `Bearer ${user.token}`
     }
