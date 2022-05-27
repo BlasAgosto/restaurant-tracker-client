@@ -1,6 +1,6 @@
-# Image Upload App
+# Restaurant Tracker App
 
-This is the frontend repo for our full stack image upload application. This app uses MongoDB as a database and integrates AWS for image storage, allowing users to upload photos with additional information and then access those photos from their thumbnails.
+This is the frontend repo for our full stack restaurant tracker. This app uses MongoDB as a database and express for API calls, allowing users to store and view the restaurants they have visited. 
 
 ## Links 
 - [Deployed App](https://glacial-atoll-96940.herokuapp.com/)
@@ -20,10 +20,10 @@ Backend:
 
 ## Planning
 
-In preparation for work on this app, our team planned out wireframes, entity relationship diagrams, and user stories which can be found below.
+In preparation for work on this app, I planned out wire-frames, entity relationship diagrams, and user stories which can be found below.
 
-### Wireframe
-![Image Upload App Wireframe](https://i.imgur.com/yaCjVyY.png "Image Upload App Wireframe")
+### Wire-frame
+![Image Upload App Wireframe](https://i.imgur.com/yaCjVyY.png "Image Upload App Wire-frame")
 
 ### Entity Relationship Diagram (ERD)
 ![Image Upload App ERD](https://i.imgur.com/vlAC77B.png "Image Upload App ERD")
@@ -51,9 +51,9 @@ In preparation for work on this app, our team planned out wireframes, entity rel
 
 ## About Me
 
-Thanks for dropping by! Currently am a software engineering students studying in General Assembly's full-time software engineering program. 
+Thanks for dropping by! Currently I am a software engineering student studying in General Assembly's full-time software engineering program. 
 
-If you'd like to checkout more of my work, visit our links below!
+If you'd like to checkout more of my work, visit my links below!
 
 **Blas Agosto**
 - [GitHub](https://github.com/BlasAgosto)
