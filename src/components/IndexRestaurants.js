@@ -2,6 +2,7 @@
 /* eslint-disable no-tabs */
 // import { Button } from 'bootstrap'
 import React, { Component } from 'react'
+// import Filter from './Filter'
 // import { Link } from 'react-router-dom'
 import { indexRestaurant } from '../api/restaurantApi'
 import Delete from './Delete'
@@ -20,7 +21,7 @@ class IndexRestaurant extends Component {
     const { user, msgAlert } = this.props
     indexRestaurant(user)
       .then((res) => this.setState({ restaurant: res.data.restaurant }))
-      .then(console.log(this.state))
+      // .then(console.log(this.state))
       .then(() =>
         msgAlert({
           heading: 'Index success',
@@ -49,7 +50,7 @@ class IndexRestaurant extends Component {
       restaurantJsx = 'No restaurants added, go eat somewhere'
     } else {
       // console.log('index time baby!')
-      console.log(restaurant)
+      // console.log(restaurant)
       restaurantJsx = restaurant.map((restaurant) => (
 				<div key={restaurant._id}>
 					Restaurant: {restaurant.name}

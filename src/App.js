@@ -12,9 +12,13 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import CreateRestaurant from './components/create_restaurant'
 import IndexRestaurants from './components/IndexRestaurants'
+import Filter from './components/Filter'
+import RestaurantForm from './components/Rest_deets'
+
 // import AllRestaurants from './components/AllRestaurants'
 // import Delete from './components/Delete'
 // import IndexRestaurant from '../REMOVED/Index_Restaurant'
+// import ShowRestaurant from './components/Filter'
 
 class App extends Component {
   constructor (props) {
@@ -105,14 +109,18 @@ class App extends Component {
               <IndexRestaurants msgAlert={this.msgAlert} user={user} />
             )}
           />
-          {/* <AuthenticatedRoute
+          <AuthenticatedRoute
             user={user}
             exact
             path='/'
             render={() => (
-              <AllRestaurants msgAlert={this.msgAlert} user={user} />
+              <Filter
+                msgAlert={this.msgAlert}
+                user={user}
+                {...RestaurantForm}
+              />
             )}
-          /> */}
+          />
         </main>
       </Fragment>
     )

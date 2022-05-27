@@ -9,7 +9,7 @@ const authenticatedOptions = (
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
     <NavLink to='/add-rests' className='nav-link'>Add Restaurant</NavLink>
     <NavLink to='/your-rests' className='nav-link'>Your Restaurants</NavLink>
-    <NavLink to='/filter-rests' className='nav-link'>Search Your Restaurants</NavLink>
+    {/* <NavLink to='/filter-rests' className='nav-link'>Search Your Restaurants</NavLink> */}
   </Fragment>
 )
 

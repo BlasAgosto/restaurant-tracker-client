@@ -1,23 +1,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-tabs */
-// import { Button } from 'bootstrap'
-import React from 'react'
-// import RadioChoice from './RadioButton'
-// import RadioChoice from './RadioButton'
-
-// import Booleans from './RestaurantBooleans'
-// import axios from 'axios'
-// import apiUrl from '../apiConfig'
-// import RestaurantRank from './rest_rating'
+import { React } from 'react'
 
 export default function RestaurantForm (props) {
   // console.log(props)
   // const [inputs, setInputs] = useState({})
   // console.log(inputs)
   // const [msgAlert] = props
-
   const { restaurant, handleSubmit, handleChange } = props
-  console.log(restaurant)
+  // console.log(restaurant)
   // const handleChange = (event) => {
   //   const name = event.target.name
   //   const value = event.target.value
@@ -49,7 +40,12 @@ export default function RestaurantForm (props) {
           value={restaurant.rating || ''}
           onChange={handleChange}
         /> */}
-        <select type='number' name='rating' value={restaurant.rating} onChange={handleChange}>
+        <select
+          type='number'
+          name='rating'
+          value={restaurant.rating}
+          onChange={handleChange}>
+          <option value= 'null'></option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
