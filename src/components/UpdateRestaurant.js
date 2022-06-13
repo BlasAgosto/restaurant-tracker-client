@@ -4,13 +4,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import apiUrl from '../apiConfig'
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export default function UpdateRestaurant ({ user, msgAlert, id }) {
   const [restaurantName, setRestaurantName] = useState('')
   const [restaurantThoughts, setRestaurantThoughts] = useState('')
 
-  // const history = useHistory()
+  const history = useHistory()
 
   const handleChangeName = (event) => {
     setRestaurantName(event.target.value)
@@ -23,7 +23,7 @@ export default function UpdateRestaurant ({ user, msgAlert, id }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     //  ===================================TURN ME BACK ON ==============================================================
-    // history.push('/')
+    history.push('/')
     // =============================THIS GUY ^^^^^====================================================================
     function wipe () {
       event.value = ('')
