@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/restaurant-tracker-client/static/css/main.432dfbff.chunk.css",
-    "main.js": "/restaurant-tracker-client/static/js/main.3c063dc4.chunk.js",
-    "main.js.map": "/restaurant-tracker-client/static/js/main.3c063dc4.chunk.js.map",
+    "main.js": "/restaurant-tracker-client/static/js/main.a4092866.chunk.js",
+    "main.js.map": "/restaurant-tracker-client/static/js/main.a4092866.chunk.js.map",
     "runtime-main.js": "/restaurant-tracker-client/static/js/runtime-main.ff3bcbc0.js",
     "runtime-main.js.map": "/restaurant-tracker-client/static/js/runtime-main.ff3bcbc0.js.map",
-    "static/js/2.a1a943a8.chunk.js": "/restaurant-tracker-client/static/js/2.a1a943a8.chunk.js",
-    "static/js/2.a1a943a8.chunk.js.map": "/restaurant-tracker-client/static/js/2.a1a943a8.chunk.js.map",
+    "static/js/2.ce53a9c2.chunk.js": "/restaurant-tracker-client/static/js/2.ce53a9c2.chunk.js",
+    "static/js/2.ce53a9c2.chunk.js.map": "/restaurant-tracker-client/static/js/2.ce53a9c2.chunk.js.map",
     "index.html": "/restaurant-tracker-client/index.html",
     "static/css/main.432dfbff.chunk.css.map": "/restaurant-tracker-client/static/css/main.432dfbff.chunk.css.map",
-    "static/js/2.a1a943a8.chunk.js.LICENSE.txt": "/restaurant-tracker-client/static/js/2.a1a943a8.chunk.js.LICENSE.txt"
+    "static/js/2.ce53a9c2.chunk.js.LICENSE.txt": "/restaurant-tracker-client/static/js/2.ce53a9c2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ff3bcbc0.js",
-    "static/js/2.a1a943a8.chunk.js",
+    "static/js/2.ce53a9c2.chunk.js",
     "static/css/main.432dfbff.chunk.css",
-    "static/js/main.3c063dc4.chunk.js"
+    "static/js/main.a4092866.chunk.js"
   ]
 }
