@@ -1,28 +1,41 @@
+/* eslint-disable func-call-spacing */
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-tabs */
 import React, { useState } from 'react'
 import axios from 'axios'
 import apiUrl from '../apiConfig'
+// import { useHistory } from 'react-router-dom'
 
 export default function UpdateRestaurant ({ user, msgAlert, id }) {
-//   const [imageTitle, setImageTitle] = useState('')
-//   const [imageCaption, setImageCaption] = useState('')
   const [restaurantName, setRestaurantName] = useState('')
   const [restaurantThoughts, setRestaurantThoughts] = useState('')
+
+  // const history = useHistory()
 
   const handleChangeName = (event) => {
     setRestaurantName(event.target.value)
   }
   const handleChangeThoughts = (event) => {
     setRestaurantThoughts(event.target.value)
+    // const allData = event.target.value
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // restaurant = destructured values. for consistancy across all CRUD actions
+    //  ===================================TURN ME BACK ON ==============================================================
+    // history.push('/')
+    // =============================THIS GUY ^^^^^====================================================================
+    function wipe () {
+      event.value = ('')
+    }
+    wipe()
     const updateData = {
       name: restaurantName,
       thoughts: restaurantThoughts
     }
+
+    // window.location.reload()
+
     axios({
       url: apiUrl + `/your-rests/${id}`,
       method: 'PATCH',
@@ -31,7 +44,6 @@ export default function UpdateRestaurant ({ user, msgAlert, id }) {
       },
       data: { updateData }
     })
-
       .then((res) => {
         return res
       })
@@ -42,6 +54,9 @@ export default function UpdateRestaurant ({ user, msgAlert, id }) {
           variant: 'success'
         })
       )
+    // .then(console.log({ updateData }))
+    // .then(history.push('/'))
+    // .then(refreshPage())
       .catch((error) => {
         msgAlert({
           heading: 'Update Failed with error: ' + error.message,
@@ -50,6 +65,35 @@ export default function UpdateRestaurant ({ user, msgAlert, id }) {
         })
       })
   }
+  /* =================================================================================================
+  // =================================================================================================
+
+  // const resetFields = () => {
+  //   setRestaurantName('')
+  //   setRestaurantThoughts('')
+  // }
+    const handleClear = (event) => {
+			//   event.preventDefault(event)
+			// const clearFields = {
+			// name: (''),
+			// thoughts: ('')
+			// }
+			event.target.value = ''
+			// setRestaurantThoughts('')
+			console.log(event.target.value)
+			// restaurantName.current.value = ''
+			// restaurantThoughts.current.value = ''
+			//  name: '',
+			// thoughts: ''
+			// }
+		}
+        // onSubmit={(updateData, {resetForm}) => {
+    //    console.log('hi', updateData)
+    //    resetForm({updateData: "  "})
+    // }}
+  //= ===============================================================================================
+  //= ===============================================================================================
+ = =============================================================================================== */
 
   return (
     <div>

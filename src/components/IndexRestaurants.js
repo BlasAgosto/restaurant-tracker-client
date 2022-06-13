@@ -70,6 +70,7 @@ class IndexRestaurant extends Component {
 						msgAlert={msgAlert}
 						user={user}
 						id={restaurant._id}
+            history
 					/>
 				</div>
 			))
